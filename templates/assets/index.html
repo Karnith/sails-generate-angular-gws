@@ -30,12 +30,15 @@
     -->
 
     <!--STYLES-->
+
     <!--STYLES END-->
 </head>
 
 <body>
-<%- body %>
 
+    <div ng-include="'header/index.tpl.html'"></div>
+    <div ui-view="main">
+    </div><!-- /.container -->
 
 
 <!--
@@ -62,6 +65,7 @@
 -->
 
 <!--SCRIPTS-->
+
 <!--SCRIPTS END-->
 
 <!--
@@ -87,6 +91,8 @@
 
 <!--TEMPLATES-->
 <!--TEMPLATES END-->
-
+    <script>
+        io.sails.url = 'http://localhost:1337'
+    </script>
 </body>
 </html>

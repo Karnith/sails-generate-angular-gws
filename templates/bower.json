@@ -1,10 +1,10 @@
 {
     "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
     ],
     "dependencies": {
         "angular-rx-data-table": "~0.5.12",
@@ -15,11 +15,11 @@
     "devDependencies": {
         "angular": "~1.3.0",
         "angular-bootstrap": "~0.11.0",
-        "angular-mocks": "~1.2.23",
+        "angular-mocks": "~1.3.0",
         "angular-moment": "~0.8.1",
         "angular-sails": "~1.0.4",
-        "angular-translate": "~2.2.0",
-        "angular-translate-loader-static-files": "~2.2.0",
+        "angular-translate": "~2.4.0",
+        "angular-translate-loader-static-files": "~2.4.0",
         "angular-ui-router": "~0.2.11",
         "angular-ui-utils": "~0.1.1",
         "bootstrap": "~3.2.0",
@@ -28,10 +28,17 @@
     },
     "overrides": {
         "angular": {
-            "main": ["./**/angular.js", "./**/*.css"]
+            "main": [
+                "./**/*.min.js",
+                "./**/*.map",
+                "./**/*.css"
+            ]
         },
         "angular-animate": {
-            "main": ["./**/*.min.js", "./**/*.min.js.map"]
+            "main": [
+                "./**/*.min.js",
+                "./**/*.min.js.map"
+            ]
         },
         "angular-bootstrap": {
             "main": "./**/*tpls.min.js"
@@ -40,19 +47,31 @@
             "main": "./angular-mocks.js"
         },
         "angular-moment": {
-            "main": ["./**/*.min.js", "./**/*.min.js.map"]
+            "main": [
+                "./**/*.min.js",
+                "./**/*.min.js.map"
+            ]
         },
         "angular-route": {
-            "main": ["./**/*.min.js", "./**/*.min.js.map"]
+            "main": [
+                "./**/*.min.js",
+                "./**/*.min.js.map"
+            ]
         },
         "angular-rx-data-table": {
-            "main": ["./dist/**/*table.js", "./dist/**/*.min.css"]
+            "main": [
+                "./dist/**/*table.js",
+                "./dist/**/*.min.css"
+            ]
         },
         "angular-sails": {
             "main": "./dist/**/*.min.js"
         },
         "angular-sanitize": {
-            "main": ["./**/*.min.js", "./**/*.min.js.map"]
+            "main": [
+                "./**/*.min.js",
+                "./**/*.min.js.map"
+            ]
         },
         "angular-translate": {
             "main": "./**/*.min.js"
@@ -67,7 +86,10 @@
             "main": "./**/*.min.js"
         },
         "angular-xeditable": {
-            "main": ["./dist/**/*.min.js", "./dist/**/*.css"]
+            "main": [
+                "./dist/**/*.min.js",
+                "./dist/**/*.css"
+            ]
         },
         "bootstrap": {
             "main": [
@@ -78,16 +100,28 @@
             ]
         },
         "bootstrapValidator": {
-            "main": ["./dist/**/*.min.js", "./dist/**/*min.css"]
+            "main": [
+                "./dist/**/*.min.js",
+                "./dist/**/*min.css"
+            ]
         },
         "es5-shim": {
-            "main": ["./**/*.min.js", "./**/*.map"]
+            "main": [
+                "./**/*.min.js",
+                "./**/*.map"
+            ]
         },
         "fontawesome": {
-            "main": ["./css/**/*min.css", "./fonts/*"]
+            "main": [
+                "./css/**/*min.css",
+                "./fonts/*"
+            ]
         },
         "jquery": {
-            "main": ["./dist/*.min.js", "./dist/*.min.map"]
+            "main": [
+                "./dist/*.min.js",
+                "./dist/*.min.map"
+            ]
         },
         "json3": {
             "main": "./**/*.min.js"
@@ -99,14 +133,23 @@
             "main": "./**/*-locales.min.js"
         },
         "ng-table-extend": {
-            "main": ["./**/*.min.js", "./**/*.min.css", "./**/*.map"]
+            "main": [
+                "./**/*.min.js",
+                "./**/*.min.css",
+                "./**/*.map"
+            ]
         },
         "socket.io-client": {
-            "main": ["./socket.io.js"]
+            "main": [
+                "./socket.io.js"
+            ]
         }
     },
     "resolutions": {
-        "angular": "~1.3.0",
-        "bootstrap": "~3.2.0"
-    }
+        "angular": "~1.3.0"
+    },
+    "name": "angwebserver",
+    "version": "0.0.0",
+    "author": "anonymous node/sails user",
+    "private": true
 }

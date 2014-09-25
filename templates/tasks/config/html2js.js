@@ -15,7 +15,7 @@ module.exports = function (gulp, plugins, growl) {
             })
         )
         .pipe(plugins.concat('templates.js'))
-        .pipe(gulp.dest('.tmp/public'))
+        .pipe(gulp.dest('app'))
         .pipe(plugins.if(growl, plugins.notify({ message: 'insert growl message' })));
     });
 };

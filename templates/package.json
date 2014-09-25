@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "gulp-ng-html2js": "*"
+    "coffee-script": "*",
+    "gulp-ng-html2js": "*",
+    "gulp-webserver": "*",
+    "gulp-ng-classify": "*"
   }
 }
