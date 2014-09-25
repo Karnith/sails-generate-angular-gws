@@ -4,11 +4,11 @@ Example application using this generator
 
 ## Install
 clone this example and run
-``sh
+```sh
 npm install
 bower install
 sails lift
-``
+```
 
 use the browser console to add users
 ```sh
