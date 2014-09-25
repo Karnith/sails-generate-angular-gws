@@ -3,6 +3,7 @@
     "coffee-script": "*",
     "gulp-ng-html2js": "*",
     "gulp-webserver": "*",
-    "gulp-ng-classify": "*"
+    "gulp-ng-classify": "*",
+    "rimraf": "*"
   }
 }

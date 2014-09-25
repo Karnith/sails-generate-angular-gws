@@ -16,8 +16,7 @@ class App extends App('sailng')
       "sailng.about"
     ]
 class myAppConfig extends Config('sailng')
-  constructor: ($stateProvider, $urlRouterProvider, $locationProvider, $sailsProvider)->
-    $sailsProvider.url = 'http://localhost:1337'
+  constructor: ($stateProvider, $urlRouterProvider, $locationProvider)->
     $urlRouterProvider.otherwise '/'
     $locationProvider.html5Mode true
 class Run extends Run('sailng')
