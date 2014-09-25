@@ -1,0 +1,12 @@
+{
+  "hooks": {
+      "grunt": false
+  },
+  "generators": {
+    "modules": {
+		"bower": "sails-generate-bower-gulp",
+		"auth": "sails-generate-auth",
+		"angular": "sails-generate-angular-gws"
+	}
+  }
+}
