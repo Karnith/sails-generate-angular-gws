@@ -68,7 +68,6 @@ In  tasks/config/pipeline.js replace everything in ```jsFilesToInject = [ ``` wi
   // will be injected here in no particular order.
   'js/**/*.js'
 ```
-in ``` config/routes.js ``` change '/': to ``` '/': 'HomeController.index' ```
 Do a sails lift and you're ready to start coding.
 
 ##Features
