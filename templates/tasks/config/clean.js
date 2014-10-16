@@ -9,11 +9,6 @@
  */
 var rimraf = require('rimraf');
 module.exports = function(gulp, plugins, growl) {
-	// gulp.task('clean:dev', function() {
-	// 	return gulp.src(['.tmp/public/**/*.*', '.tmp/public{,/**}', 'app{,/**}'], {read: false})
-	// 			.pipe(plugins.rimraf({ force: true }))
-	// 			.pipe(plugins.if(growl, plugins.notify({ message: 'Clean task complete' })));
-	// });
 	gulp.task('clean:dev', function(cb) {
       return rimraf('app', cb);
   });
