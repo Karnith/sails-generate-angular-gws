@@ -35,7 +35,7 @@ module.exports = function(gulp, plugins, growl) {
             }))
             // Link the JST Templates
             .pipe(plugins.linker({
-                scripts: ['app/jst.js'],
+                scripts: ['app/templates.js'],
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
@@ -103,7 +103,7 @@ module.exports = function(gulp, plugins, growl) {
             }))
             // Link the JST Templates
             .pipe(plugins.linker({
-                scripts: ['app/jst.js'],
+                scripts: ['app/templates.js'],
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
@@ -171,7 +171,7 @@ module.exports = function(gulp, plugins, growl) {
             }))
             // Link the JST Templates
             .pipe(plugins.linker({
-                scripts: ['app/jst.js'],
+                scripts: ['app/templates.js'],
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
@@ -239,7 +239,7 @@ module.exports = function(gulp, plugins, growl) {
             }))
             // Link the JST Templates
             .pipe(plugins.linker({
-                scripts: ['app/jst.js'],
+                scripts: ['app/templates.js'],
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
