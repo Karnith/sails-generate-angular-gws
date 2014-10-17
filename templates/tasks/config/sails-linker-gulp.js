@@ -42,7 +42,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: 'app',
+                appRoot: 'app'
             }))
             // Write modified files...
             .pipe(gulp.dest('app'))
@@ -75,7 +75,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public',
+                appRoot: '.tmp/public'
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))
@@ -145,7 +145,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public',
+                appRoot: '.tmp/public'
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))
@@ -178,7 +178,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: 'app',
+                appRoot: 'app'
             }))
             // Write modified files...
             .pipe(gulp.dest('app'))
@@ -211,7 +211,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public',
+                appRoot: '.tmp/public'
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))
@@ -246,7 +246,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: 'app',
+                appRoot: 'app'
             }))
             // Write modified files...
             .pipe(gulp.dest('app'))
@@ -281,7 +281,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public',
+                appRoot: '.tmp/public'
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))
