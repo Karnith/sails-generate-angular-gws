@@ -14,8 +14,8 @@ module.exports = function (gulp, plugins, growl) {
                 moduleName: "templates-app"
             })
         )
-        .pipe(plugins.concat('templates.js'))
-        .pipe(gulp.dest('app'))
-        .pipe(plugins.if(growl, plugins.notify({ message: 'insert growl message' })));
+            .pipe(plugins.concat('templates.js'))
+            .pipe(gulp.dest('app'))
+            .pipe(plugins.if(growl, plugins.notify({ message: 'insert growl message' })));
     });
 };

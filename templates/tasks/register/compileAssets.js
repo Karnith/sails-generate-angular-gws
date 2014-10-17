@@ -1,6 +1,6 @@
 module.exports = function (gulp, plugins) {
-	gulp.task('compileAssets', function(cb) {
-		plugins.sequence(
+    gulp.task('compileAssets', function(cb) {
+        plugins.sequence(
             'bower:install',
             'bower:copy',
             'clean:dev',
@@ -11,6 +11,6 @@ module.exports = function (gulp, plugins) {
             'copy:dev',
             'coffee:dev',
             cb
-		);
-	});
+        );
+    });
 };
