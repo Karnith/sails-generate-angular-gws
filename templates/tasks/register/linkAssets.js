@@ -3,6 +3,7 @@ module.exports = function (gulp, plugins) {
 		plugins.sequence(
             'sails-linker-gulp:devAssets',
             'sails-linker-gulp:devViews',
+            'sails-linker-gulp:devTplNg',
 			cb
 		);
 	});

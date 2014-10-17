@@ -9,12 +9,12 @@
  */
 var rimraf = require('rimraf');
 module.exports = function(gulp, plugins, growl) {
-	gulp.task('clean:dev', function(cb) {
-      return rimraf('app', cb);
-  });
-	gulp.task('clean:build', function() {
-		return gulp.src(['www/**/*.*', 'www{,/**}'], {read: false})
-				.pipe(plugins.rimraf({ force: true }))
-				.pipe(plugins.if(growl, plugins.notify({ message: 'Clean task complete' })));
-	});
+    gulp.task('clean:dev', function(cb) {
+        return rimraf('app', cb);
+    });
+    gulp.task('clean:build', function() {
+        return gulp.src(['www/**/*.*', 'www{,/**}'], {read: false})
+            .pipe(plugins.rimraf({ force: true }))
+            .pipe(plugins.if(growl, plugins.notify({ message: 'Clean task complete' })));
+    });
 };

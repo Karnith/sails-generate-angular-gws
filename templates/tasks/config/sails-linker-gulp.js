@@ -1,17 +1,20 @@
-/**
- * Autoinsert script tags (or other filebased tags) in an html file.
- *
- * ---------------------------------------------------------------
- *
- * Automatically inject <script> tags for javascript files and <link> tags
- * for css files.  Also automatically links an output file containing precompiled
- * templates using a <script> tag.
- *
- * For usage docs see:
- * 		https://github.com/Zolmeister/grunt-sails-linker
- *
- */
 module.exports = function(gulp, plugins, growl) {
+
+    gulp.task('sails-linker-gulp:devTplNg', function() {
+        // Read templates
+        return gulp.src(['app/index.html'])
+            // Link the ng Templates
+            .pipe(plugins.linker({
+                scripts: ['app/templates.js'],
+                startTag: '<!--TEMPLATES-->',
+                endTag: '<!--TEMPLATES END-->',
+                fileTmpl: '<script type="text/javascript" src="%s"></script>',
+                appRoot: 'app'
+            }))
+            // Write modified files to www/
+            .pipe(gulp.dest('app/'))
+            .pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp devTpl task complete' })));
+    });
 
     // Insert JS, CSS and template dev links into HTML files in the tmp assets folder
     gulp.task('sails-linker-gulp:devAssets', function() {
@@ -39,7 +42,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: 'app'
+                appRoot: 'app',
             }))
             // Write modified files...
             .pipe(gulp.dest('app'))
@@ -72,7 +75,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public'
+                appRoot: '.tmp/public',
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))
@@ -142,7 +145,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public'
+                appRoot: '.tmp/public',
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))
@@ -175,7 +178,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: 'app'
+                appRoot: 'app',
             }))
             // Write modified files...
             .pipe(gulp.dest('app'))
@@ -208,7 +211,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public'
+                appRoot: '.tmp/public',
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))
@@ -243,7 +246,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: 'app'
+                appRoot: 'app',
             }))
             // Write modified files...
             .pipe(gulp.dest('app'))
@@ -278,7 +281,7 @@ module.exports = function(gulp, plugins, growl) {
                 startTag: '<!--TEMPLATES-->',
                 endTag: '<!--TEMPLATES END-->',
                 fileTmpl: '<script type="text/javascript" src="%s"></script>',
-                appRoot: '.tmp/public'
+                appRoot: '.tmp/public',
             }))
             // Write modified files...
             .pipe(gulp.dest('views/'))

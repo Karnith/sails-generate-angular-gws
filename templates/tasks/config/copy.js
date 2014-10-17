@@ -12,14 +12,14 @@
  *
  */
 module.exports = function(gulp, plugins, growl) {
-	gulp.task('copy:dev', function() {
-		return gulp.src(['./assets/**/*.!(coffee|less)', '!assets/images{,/**}', '!assets/src/{,/**}'])
-				.pipe(gulp.dest('app'))
-				.pipe(plugins.if(growl, plugins.notify({ message: 'Copy dev task complete' })));
-	});
-	gulp.task('copy:build', function() {
-		return gulp.src('.tmp/public/**/*')
-				.pipe(gulp.dest('www'))
-				.pipe(plugins.if(growl, plugins.notify({ message: 'Copy build task complete' })));
-	});
+    gulp.task('copy:dev', function() {
+        return gulp.src(['./assets/**/*.!(coffee|less)', '!assets/images{,/**}', '!assets/src/{,/**}'])
+            .pipe(gulp.dest('app'))
+            .pipe(plugins.if(growl, plugins.notify({ message: 'Copy dev task complete' })));
+    });
+    gulp.task('copy:build', function() {
+        return gulp.src('.tmp/public/**/*')
+            .pipe(gulp.dest('www'))
+            .pipe(plugins.if(growl, plugins.notify({ message: 'Copy build task complete' })));
+    });
 };

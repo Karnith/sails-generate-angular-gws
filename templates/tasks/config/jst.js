@@ -11,15 +11,15 @@
  */
 
 module.exports = function(gulp, plugins, growl) {
-	gulp.task('jst:dev', function() {
-		return gulp.src(require('../pipeline').templateFilesToInject)
-				.pipe(plugins.templateCompile({
-                   name: function(file) {
-                       return 'assets/templates/' + file.relative;
-                   }
-                }))
-                .pipe(plugins.concat('jst.js'))
-				.pipe(gulp.dest('app'))
-				.pipe(plugins.if(growl, plugins.notify({ message: 'jst dev task complete' })));
-	});
+    gulp.task('jst:dev', function() {
+        return gulp.src(require('../pipeline').templateFilesToInject)
+            .pipe(plugins.templateCompile({
+                name: function(file) {
+                    return 'assets/templates/' + file.relative;
+                }
+            }))
+            .pipe(plugins.concat('jst.js'))
+            .pipe(gulp.dest('app'))
+            .pipe(plugins.if(growl, plugins.notify({ message: 'jst dev task complete' })));
+    });
 };
