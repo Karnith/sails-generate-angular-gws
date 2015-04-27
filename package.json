@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-angular-gws",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Add angular support for Sails when using gulp and an extra webserver.",
   "main": "lib/index.js",
   "homepage": "http://github.com/karnith/sails-generate-angular-gws",
@@ -19,8 +19,8 @@
   "author": "Karnith",
   "license": "MIT",
   "dependencies": {
-  	"lodash": ">=2.4.x",
-  	"merge-defaults": ">=0.1.0"
+  	"lodash": "*",
+  	"merge-defaults": "*"
   },
   "devDependencies": {
     "sails-generate": "*",
@@ -37,6 +37,6 @@
   "sailsGenerator": {
     "type": "angular",
     "behavior": "overrides `sails generate angular`",
-    "sailsVersion": "~0.10.0"
+    "sailsVersion": "~0.11.0"
   }
 }
